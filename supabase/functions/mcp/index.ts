@@ -242,7 +242,7 @@ var list_conversations_default = defineTool5({
 });
 
 // src/lib/mcp/index.ts
-var projectRef = "syvhrtaksjcvhrzhbltt";
+var projectRef = "ljauactfinyqiqpwauzx";
 var mcp_default = defineMcp({
   name: "remix-oficial-vendus-v5",
   title: "Remix Oficial Vendus v5",
