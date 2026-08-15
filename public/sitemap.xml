@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://app.vendus.com.br/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://app.vendus.com.br/login</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://app.vendus.com.br/vendas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  
+
+  <!-- Documentação -->
+  <url><loc>https://app.vendus.com.br/docs</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://app.vendus.com.br/docs/glossario</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://app.vendus.com.br/docs/changelog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Vendedor -->
+  <url><loc>https://app.vendus.com.br/docs/vendedor</loc><priority>0.8</priority></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/primeiros-passos</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/inbox</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/conversa</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/whatsapp</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/lead</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/deals</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/tarefas</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/agendamentos</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/copiloto</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/cadencias</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/bant</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/relatorios</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/atalhos</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/vendedor/mobile</loc></url>
+
+  <!-- Admin -->
+  <url><loc>https://app.vendus.com.br/docs/admin</loc><priority>0.8</priority></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/conceitos</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/equipe</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/permissoes</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/produtos</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/brain</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/catalogo</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/agentes</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/funis</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/formularios</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/quizzes</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/widget</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/cadencias</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/agendamentos</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/auto-dispatch</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/tags</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/integracoes</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/webhooks</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/email-massa</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/notificacoes</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/radar</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/relatorios</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/configuracoes</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/admin/playbook</loc></url>
+
+  <!-- Super Admin -->
+  <url><loc>https://app.vendus.com.br/docs/super-admin</loc><priority>0.8</priority></url>
+  <url><loc>https://app.vendus.com.br/docs/super-admin/visao-geral</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/super-admin/identidade</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/super-admin/planos</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/super-admin/empresas</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/super-admin/whatsapp-server</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/super-admin/credenciais</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/super-admin/templates</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/super-admin/auditoria</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/super-admin/notificacoes</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/super-admin/dominio</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/super-admin/suporte</loc></url>
+
+  <!-- Desenvolvedor -->
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor</loc><priority>0.8</priority></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/autenticacao</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/modelo-dados</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/webhook-entrada</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/webhook-saida</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/edge-functions</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/whatsapp-cloud</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/evolution</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/facebook-leads</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/hotmart</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/cakto-doppus</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/google-calendar</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/widget-js</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/realtime</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/limites</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/desenvolvedor/erros</loc></url>
+
+  <!-- Conceitos -->
+  <url><loc>https://app.vendus.com.br/docs/conceitos</loc><priority>0.7</priority></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/lead</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/deal</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/conversa</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/setor</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/squad</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/produto</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/brain</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/agente-ia</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/copiloto</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/cadencia</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/funil</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/tag</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/permissoes</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/bant</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/auto-dispatch</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/atendente-unico</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/handoff</loc></url>
+  <url><loc>https://app.vendus.com.br/docs/conceitos/white-label</loc></url>
+</urlset>

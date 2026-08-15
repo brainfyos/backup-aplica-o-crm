@@ -1,0 +1,20 @@
+/// <reference types="npm:@types/react@18.3.1" />
+import * as React from 'npm:react@18.3.1'
+
+export interface TemplateEntry {
+  component: React.ComponentType<any>
+  subject: string | ((data: Record<string, any>) => string)
+  to?: string
+  displayName?: string
+  previewData?: Record<string, any>
+}
+
+import { template as platformGeneric } from './platform-generic.tsx'
+import { template as testEmail } from './test-email.tsx'
+import { template as welcomeAdminAccess } from './welcome-admin-access.tsx'
+
+export const TEMPLATES: Record<string, TemplateEntry> = {
+  'platform-generic': platformGeneric,
+  'test-email': testEmail,
+  'welcome-admin-access': welcomeAdminAccess,
+}

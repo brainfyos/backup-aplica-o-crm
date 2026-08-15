@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Vendus</title>
+    <meta name="description" content="Vendus — Plataforma de vendas com IA">
+    <meta name="author" content="Vendus" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#84CC16" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Vendus" />
+    
+    <!-- Apple Touch Icons - múltiplos tamanhos para compatibilidade -->
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/icon-128x128.png" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Fonts p/ /call/:slug (moldura iPhone) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/XhexhxuTQoWCWLGbOYaQVbKuNzT2/social-images/social-1781274552089-ChatGPT_Image_28_de_abr._de_2026,_10_12_19.webp">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/XhexhxuTQoWCWLGbOYaQVbKuNzT2/social-images/social-1781274552089-ChatGPT_Image_28_de_abr._de_2026,_10_12_19.webp">
+
+    <!-- Boot styles: prevent white flash before React mounts -->
+    <style>
+      html, body {
+        background: #0a0d14;
+        color: #e5e7eb;
+        margin: 0;
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+      #root { min-height: 100vh; }
+      #boot-loader {
+        position: fixed; inset: 0;
+        display: flex; align-items: center; justify-content: center;
+        background: #0a0d14;
+        z-index: 9999;
+      }
+      #boot-loader .spinner {
+        width: 36px; height: 36px;
+        border: 3px solid rgba(132, 204, 22, 0.18);
+        border-top-color: #84CC16;
+        border-radius: 50%;
+        animation: boot-spin 0.8s linear infinite;
+      }
+      @keyframes boot-spin { to { transform: rotate(360deg); } }
+      .app-mounted #boot-loader { display: none; }
+    </style>
+    
+  
+  
+  
+  <meta property="og:title" content="Vendus">
+  <meta name="twitter:title" content="Vendus">
+  <meta property="og:description" content="Vendus — Plataforma de vendas com IA">
+  <meta name="twitter:description" content="Vendus — Plataforma de vendas com IA">
+</head>
+
+  <body>
+    <div id="root">
+      <div id="boot-loader"><div class="spinner"></div></div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

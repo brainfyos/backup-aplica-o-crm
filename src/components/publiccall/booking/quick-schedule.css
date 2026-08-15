@@ -1,0 +1,109 @@
+/* Chips dinâmicos (tool call mostrar_agendamento / agendar_reuniao)
+   Visual do HTML v2 (.dynbtn). Cores usam vars da appearance (--pc-*). */
+
+.pc-dynzone {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+  padding: 4px 0;
+}
+
+.pc-dyntag {
+  align-self: center;
+  font-family: var(--pc-font-mono, 'Space Mono', monospace);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  animation: pc-dyn-pop 0.4s forwards;
+}
+.pc-dyntag i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #a3e635;
+  box-shadow: 0 0 8px #a3e635;
+}
+
+.pc-dynbtn {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  padding: 15px 17px;
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: left;
+  color: #fff;
+  font-family: var(--pc-font-body, 'Inter', system-ui, sans-serif);
+  font-size: 15px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  opacity: 0;
+  transform: translateY(14px) scale(0.96);
+  animation: pc-dyn-born 0.5s cubic-bezier(0.3, 1.4, 0.5, 1) forwards;
+  transition: background 0.15s, transform 0.15s, border-color 0.15s, opacity 0.25s, filter 0.25s;
+}
+.pc-dynbtn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateY(-1px);
+}
+.pc-dynbtn .pc-dynico {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 18px;
+}
+.pc-dynbtn .pc-dynlbl {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pc-dynbtn small {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+}
+.pc-dynbtn-picked {
+  border-color: var(--pc-cta, #34c759);
+  background: color-mix(in srgb, var(--pc-cta, #34c759) 28%, transparent);
+  pointer-events: none;
+}
+.pc-dynbtn-gone {
+  opacity: 0.25;
+  pointer-events: none;
+  filter: grayscale(1);
+}
+
+@keyframes pc-dyn-born {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pc-dyn-pop {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pc-dynbtn,
+  .pc-dyntag {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

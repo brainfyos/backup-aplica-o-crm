@@ -1,0 +1,22 @@
+{
+  "version": "20260814.1",
+  "migration": "20260814223000_remix_runtime_parity_certification.sql",
+  "repairRpc": "reconcile_remix_database_contract",
+  "reportRpc": "platform_health_report",
+  "bootstrapRpc": "ensure_platform_bootstrap",
+  "expected": {
+    "schemaFingerprints": 10,
+    "securityFingerprints": 3,
+    "functionAclObjects": 58,
+    "relationAclObjects": 11,
+    "realtimeTables": 7,
+    "authTriggers": 2,
+    "cronJobs": 8,
+    "storageBuckets": 17,
+    "vaultSecrets": 1,
+    "requiredEdgeSecrets": [
+      "AGENT_IMPORT_TOKEN",
+      "LAUNCH_META_INSIGHTS_SECRET"
+    ]
+  }
+}

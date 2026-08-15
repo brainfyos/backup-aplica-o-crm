@@ -1,0 +1,6 @@
+- [Rotação de Templates HSM na Cadência](mem://funcionalidades/automacao/cadencia-rotacao-templates-hsm-v1) — Etapa aceita várias variações de template com rodízio aleatório/sequencial por lead
+- [Cadência: público por resposta](mem://funcionalidades/automacao/cadencia-publico-respondeu-v1) — Etapa escolhe Todos / Respondeu / Não respondeu; janela 24h e template viram consequência automática; cadence-tick filtra por inbound real
+- [Exclusão de membro por empresa](mem://regras-negocio/gestao-equipe/exclusao-por-empresa-e-adocao-de-orfaos-v1) — delete-team-member remove só da empresa atual; apaga o login apenas no último vínculo; criação adota contas órfãs
+- [Cadência: horário fixo x janela](mem://funcionalidades/automacao/cadencia-horario-fixo-vs-janela-v1) — Etapas fixed_time ignoram a janela global, fuso America/Sao_Paulo, pula horários vencidos (10min), randomize 0-20min só em etapas relativas
+- [Contexto do agente: briefing x literal](mem://tecnico/outreach/contexto-briefing-vs-literal-v1) — `context_mode` no outreach-core; cadências usam `guidance` e não mandam cabeçalhos no extra_context
+- [Super admins aprovados](mem://seguranca/super-admins-aprovados-v1) — Apenas 2 identity_id aprovados como super_admin; qualquer outro é desvio de segurança

@@ -1,0 +1,232 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.1",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://syvhrtaksjcvhrzhbltt.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "remix-oficial-vendus-v5",
+      "version": "0.1.0",
+      "title": "Remix Oficial Vendus v5"
+    },
+    "tools": [
+      {
+        "name": "list_leads",
+        "title": "Listar leads",
+        "description": "Lista os leads visíveis para o usuário conectado, com busca opcional por nome, e-mail, telefone ou empresa.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "search": {
+              "description": "Texto para buscar em nome, e-mail, telefone ou empresa.",
+              "type": "string",
+              "minLength": 1
+            },
+            "temperature": {
+              "description": "Filtra pela temperatura do lead.",
+              "type": "string",
+              "enum": [
+                "cold",
+                "warm",
+                "hot"
+              ]
+            },
+            "limit": {
+              "default": 20,
+              "description": "Quantidade máxima de leads retornados.",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_lead",
+        "title": "Detalhar lead",
+        "description": "Retorna os dados completos de um lead (qualificação BANT, origem/UTMs, valor e próxima ação) e suas tarefas abertas.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "lead_id": {
+              "type": "string",
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$",
+              "description": "ID do lead."
+            }
+          },
+          "required": [
+            "lead_id"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "create_lead",
+        "title": "Criar lead",
+        "description": "Cria um novo lead na empresa do usuário conectado, já atribuído a ele. Use quando um novo contato precisa entrar no CRM.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "idempotentHint": false,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Nome do lead."
+            },
+            "email": {
+              "description": "E-mail do lead.",
+              "type": "string",
+              "format": "email",
+              "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_'+\\-\\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$"
+            },
+            "phone": {
+              "description": "Telefone com DDD (o DDI 55 é aplicado se ausente).",
+              "type": "string",
+              "minLength": 8
+            },
+            "company": {
+              "description": "Empresa do lead.",
+              "type": "string"
+            },
+            "source": {
+              "description": "Origem do lead (ex.: indicação, evento).",
+              "type": "string"
+            },
+            "notes": {
+              "description": "Observações iniciais.",
+              "type": "string"
+            },
+            "temperature": {
+              "description": "Temperatura inicial do lead.",
+              "type": "string",
+              "enum": [
+                "cold",
+                "warm",
+                "hot"
+              ]
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "create_task",
+        "title": "Criar tarefa",
+        "description": "Cria uma tarefa de follow-up para o usuário conectado, opcionalmente vinculada a um lead.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "idempotentHint": false,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Título da tarefa."
+            },
+            "description": {
+              "description": "Detalhes da tarefa.",
+              "type": "string"
+            },
+            "lead_id": {
+              "description": "Lead relacionado.",
+              "type": "string",
+              "format": "uuid",
+              "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+            },
+            "due_date": {
+              "description": "Vencimento em ISO 8601 (ex.: 2026-08-10T14:00:00Z).",
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+            },
+            "priority": {
+              "default": "medium",
+              "description": "Prioridade da tarefa.",
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            }
+          },
+          "required": [
+            "title"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_conversations",
+        "title": "Listar conversas",
+        "description": "Lista as conversas de atendimento (WhatsApp, webchat, Instagram) visíveis para o usuário conectado, com a última mensagem de cada uma.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "status": {
+              "description": "Filtra pelo status da conversa.",
+              "type": "string",
+              "enum": [
+                "open",
+                "waiting_human",
+                "closed"
+              ]
+            },
+            "channel": {
+              "description": "Filtra pelo canal (ex.: whatsapp, webchat, instagram).",
+              "type": "string"
+            },
+            "limit": {
+              "default": 20,
+              "description": "Quantidade máxima de conversas.",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50
+            }
+          }
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
